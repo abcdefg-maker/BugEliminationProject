@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff45d1b559b33be46bd69a25b82ab052, type: 3}
+  m_Name: "\u7B2C\u4E8C\u5929\u7ED3\u675F\uFF08\u81EA\u767D\uFF09"
+  m_EditorClassIdentifier: 
+  characterName: 
+  characterSprite: {fileID: 0}
+  sentences: []
+  voiceClip: {fileID: 0}
+  lines:
+  - speakerName: "\u65C1\u767D"
+    text: "\u516C\u53F8\u91CC\u6CA1\u6709\u4EBA\u4E86"
+    speakerPortrait: {fileID: 0}
+    voiceClip: {fileID: 0}
+  - speakerName: "\u6CE2\u5495"
+    text: "\u3010\u75B2\u60EB\u3011"
+    speakerPortrait: {fileID: -7568810174292162258, guid: d84d46e4c610c174f9882f69f78876ff, type: 3}
+    voiceClip: {fileID: 8300000, guid: 67deacb615bac49429d91dc9b976c226, type: 3}
+  - speakerName: "\u6CE2\u5495"
+    text: "\u8BF4\u660E\u4F01\u4E1A\u6587\u5316\u4E0D\u52A0\u73ED\uFF1F\u8FD9\u4E48\u677E\u5F1B\u2026\u2026"
+    speakerPortrait: {fileID: 221768547408008743, guid: 2fe4b85907b523d48ba62a4b51fd1046, type: 3}
+    voiceClip: {fileID: 8300000, guid: 3233e7abe9b1c1f44b7bc33088735f00, type: 3}
+  - speakerName: "\u6CE2\u5495"
+    text: "\u8FD9\u662F\u597D\u7684\uFF0C\u73B0\u5728\u60F3\u627E\u5230\u4E0D\u52A0\u73ED\u7684\u4F01\u4E1A\u96BE\u5982\u767B\u5929\u554A\u3002\u660E\u5929\u65E9\u70B9\u7ED3\u675F\u5DE5\u4F5C\u5427\u3002"
+    speakerPortrait: {fileID: 221768547408008743, guid: 2fe4b85907b523d48ba62a4b51fd1046, type: 3}
+    voiceClip: {fileID: 8300000, guid: e214a700abed5b5438312f17e44bef6d, type: 3}
+  flagsToSet:
+  - Day2End
+  flagsToRemove:
+  - SelfTalkDay2

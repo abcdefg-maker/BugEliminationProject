@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff45d1b559b33be46bd69a25b82ab052, type: 3}
+  m_Name: "\u7B2C\u4E09\u5929\u9003\u4EA1\u524D\uFF08\u81EA\u767D\uFF09"
+  m_EditorClassIdentifier: 
+  characterName: 
+  characterSprite: {fileID: 0}
+  sentences: []
+  voiceClip: {fileID: 0}
+  lines:
+  - speakerName: "\u6CE2\u5495"
+    text: "\uFF01\uFF1F\uFF08\u60CA\u9192\uFF09"
+    speakerPortrait: {fileID: -8218189810845437925, guid: 3c827efd65a704e4a972e7fab510b179, type: 3}
+    voiceClip: {fileID: 8300000, guid: c019a00d5b9262147819a6ff2fd31e17, type: 3}
+  - speakerName: "\u6CE2\u5495"
+    text: "\u6211\u7761\u7740\u4E86\uFF1F\uFF1F"
+    speakerPortrait: {fileID: -8218189810845437925, guid: 3c827efd65a704e4a972e7fab510b179, type: 3}
+    voiceClip: {fileID: 8300000, guid: 14c30980a07e0eb41ae7c7937fbf4556, type: 3}
+  - speakerName: "\u6CE2\u5495"
+    text: "\u4EC0\u2026\u2026\u4EC0\u4E48\u60C5\u51B5\uFF1F"
+    speakerPortrait: {fileID: -8218189810845437925, guid: 3c827efd65a704e4a972e7fab510b179, type: 3}
+    voiceClip: {fileID: 8300000, guid: 14c30980a07e0eb41ae7c7937fbf4556, type: 3}
+  - speakerName: "\uFF1F\uFF1F\uFF1F"
+    text: "\u8BF6\u6211\u2026\u2026\u6211\u8BF4\u5E94\u8BE5\u628A\u8FD9\u91CC\u2026\u2026"
+    speakerPortrait: {fileID: 0}
+    voiceClip: {fileID: 0}
+  - speakerName: "\u6CE2\u5495"
+    text: "\uFF01\uFF1F\uFF1F\uFF1F\uFF1F"
+    speakerPortrait: {fileID: -8218189810845437925, guid: 3c827efd65a704e4a972e7fab510b179, type: 3}
+    voiceClip: {fileID: 8300000, guid: 48dc908877b0fa94e9eeb112dfee4714, type: 3}
+  - speakerName: "\uFF1F\uFF1F\uFF1F"
+    text: "\u4E0D\u5BF9\u2026\u2026\u8FD9\u4E2A\u80AF\u5B9A\u4E0D\u80FD\u7559\u554A\u2026\u2026\u8FD9\u662F\u2026\u2026"
+    speakerPortrait: {fileID: 0}
+    voiceClip: {fileID: 0}
+  - speakerName: "\u6CE2\u5495"
+    text: "\uFF01\uFF1F\uFF1F\uFF1F\uFF1F"
+    speakerPortrait: {fileID: -8218189810845437925, guid: 3c827efd65a704e4a972e7fab510b179, type: 3}
+    voiceClip: {fileID: 8300000, guid: c019a00d5b9262147819a6ff2fd31e17, type: 3}
+  - speakerName: "\uFF1F\uFF1F\uFF1F"
+    text: "\u8BF6\uFF0C\u8FD9\u8FD8\u6709\u4E00\u4E2A\u2026\u2026"
+    speakerPortrait: {fileID: 0}
+    voiceClip: {fileID: 0}
+  - speakerName: "\uFF1F\uFF1F\uFF1F"
+    text: "\u2026\u2026"
+    speakerPortrait: {fileID: 0}
+    voiceClip: {fileID: 0}
+  - speakerName: "\u6CE2\u5495"
+    text: "\uFF01\uFF01\uFF01"
+    speakerPortrait: {fileID: -8218189810845437925, guid: 3c827efd65a704e4a972e7fab510b179, type: 3}
+    voiceClip: {fileID: 8300000, guid: 14c30980a07e0eb41ae7c7937fbf4556, type: 3}
+  flagsToSet:
+  - InDanger
+  flagsToRemove:
+  - SelfTalkDay3

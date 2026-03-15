@@ -1,0 +1,37 @@
+{
+  "conversation": [
+    {
+      "id": 1,
+
+      "sentences": [
+        "……这是一个全新的开始。",
+        "我必须鼓起勇气面对这一切。"
+      ],
+      "options": [
+        {
+          "text": "我已经准备好了。",
+          "nextId": 2
+        },
+        {
+          "text": "我有点害怕……",
+          "nextId": 3
+        }
+      ],
+      "CanBeUsedAsStartingPoint": true
+    },
+    {
+      "id": 2,
+      "sentences": [
+        "很好。那我们就开始吧。"
+      ],
+      "options": []
+    },
+    {
+      "id": 3,
+      "sentences": [
+        "恐惧是正常的，但你必须迈出第一步。"
+      ],
+      "options": []
+    }
+  ]
+}

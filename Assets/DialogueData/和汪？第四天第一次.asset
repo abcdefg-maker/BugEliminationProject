@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff45d1b559b33be46bd69a25b82ab052, type: 3}
+  m_Name: "\u548C\u6C6A\uFF1F\u7B2C\u56DB\u5929\u7B2C\u4E00\u6B21"
+  m_EditorClassIdentifier: 
+  characterName: 
+  characterSprite: {fileID: 0}
+  sentences: []
+  voiceClip: {fileID: 0}
+  lines:
+  - speakerName: "\u6CE2\u5495"
+    text: "\u2026\u2026"
+    speakerPortrait: {fileID: 221768547408008743, guid: 2fe4b85907b523d48ba62a4b51fd1046, type: 3}
+    voiceClip: {fileID: 8300000, guid: c019a00d5b9262147819a6ff2fd31e17, type: 3}
+  - speakerName: "\u6CE2\u5495"
+    text: "\u6628\u5929\u7684\u2026\u2026\u5230\u5E95\u662F\u4EC0\u4E48\u2026\u2026"
+    speakerPortrait: {fileID: -8218189810845437925, guid: 3c827efd65a704e4a972e7fab510b179, type: 3}
+    voiceClip: {fileID: 8300000, guid: 3233e7abe9b1c1f44b7bc33088735f00, type: 3}
+  - speakerName: "\u6CE2\u5495"
+    text: "\u8FD9\u4E9B\u5BB6\u4F19\u2026\u2026\u90FD\u5728\u2026\u2026\u90FD\u8DDF\u6CA1\u4E8B\u513F\u4EBA\u4E00\u6837\u2026\u2026\u6211\u5FC5\u987B\u627E\u4EBA\u95EE\u95EE\u2026\u2026"
+    speakerPortrait: {fileID: -8218189810845437925, guid: 3c827efd65a704e4a972e7fab510b179, type: 3}
+    voiceClip: {fileID: 8300000, guid: e214a700abed5b5438312f17e44bef6d, type: 3}
+  - speakerName: "\u6C6A\uFF1F"
+    text: "\uFF01\uFF1F\u4EC0\u4E48\uFF1F\uFF01"
+    speakerPortrait: {fileID: 1082871141864096611, guid: b4accd8abfeea7c4ba57597b1ef288a3, type: 3}
+    voiceClip: {fileID: 8300000, guid: bf9a9436bf5a23e49b4f9168fcfa818b, type: 3}
+  - speakerName: "\u6C6A\uFF1F"
+    text: "\u4F60\u6628\u5929\u6765\u4E86\uFF1F\uFF1F\u6CA1\u4EBA\u901A\u77E5\u4F60\u5417\uFF1F\uFF1F"
+    speakerPortrait: {fileID: 1082871141864096611, guid: b4accd8abfeea7c4ba57597b1ef288a3, type: 3}
+    voiceClip: {fileID: 8300000, guid: bf9a9436bf5a23e49b4f9168fcfa818b, type: 3}
+  - speakerName: "\u6C6A\uFF1F"
+    text: "\u2026\u2026\u554A"
+    speakerPortrait: {fileID: 1082871141864096611, guid: b4accd8abfeea7c4ba57597b1ef288a3, type: 3}
+    voiceClip: {fileID: 8300000, guid: 02082553de59f4549ac4d558adc590b3, type: 3}
+  - speakerName: "\u6CE2\u5495"
+    text: "\u4F60\u90FD\u77E5\u9053\uFF1F\u5230\u5E95\u600E\u4E48\u56DE\u4E8B"
+    speakerPortrait: {fileID: 221768547408008743, guid: 2fe4b85907b523d48ba62a4b51fd1046, type: 3}
+    voiceClip: {fileID: 8300000, guid: 14c30980a07e0eb41ae7c7937fbf4556, type: 3}
+  - speakerName: "\u6C6A\uFF1F"
+    text: "\u989D\uFF0C\u989D\uFF0C\u989D\u2026\u2026\u5176\u5B9E\uFF0C\u5176\u5B9E\u6211\u4EEC\u90FD\u662F\u2026\u2026\u4F60\u6709\u6CA1\u6709\u5076\u5C14\u89C9\u5F97\u81EA\u5DF1\u602A\u602A\u7684"
+    speakerPortrait: {fileID: -901727735403339519, guid: f8f20c1971e284542b9ab160abea512b, type: 3}
+    voiceClip: {fileID: 8300000, guid: 9ec74d8856382d345adf489ffc4abe74, type: 3}
+  - speakerName: "\u6CE2\u5495"
+    text: "\uFF1F"
+    speakerPortrait: {fileID: 221768547408008743, guid: 2fe4b85907b523d48ba62a4b51fd1046, type: 3}
+    voiceClip: {fileID: 8300000, guid: 67deacb615bac49429d91dc9b976c226, type: 3}
+  - speakerName: "\u6C6A\uFF1F"
+    text: "\u5176\u5B9E\uFF0C\u5176\u5B9E\uFF0C\u545C\u545C\u2026\u2026\u6211\u8BF4\u4E0D\u51FA\u53E3\u2026\u2026\u4F60\u53BB\u627E\u8001\u677F\u5427\uFF0C\u5B83\u80AF\u5B9A\u4F1A\u544A\u8BC9\u4F60"
+    speakerPortrait: {fileID: -901727735403339519, guid: f8f20c1971e284542b9ab160abea512b, type: 3}
+    voiceClip: {fileID: 8300000, guid: 40f52f2daa527c54ebc1b9a2a3c66908, type: 3}
+  - speakerName: "\u6CE2\u5495"
+    text: "\u2026\u2026\u597D\uFF0C\u597D\u5427"
+    speakerPortrait: {fileID: -8218189810845437925, guid: 3c827efd65a704e4a972e7fab510b179, type: 3}
+    voiceClip: {fileID: 8300000, guid: 14c30980a07e0eb41ae7c7937fbf4556, type: 3}
+  - speakerName: "\u65C1\u767D"
+    text: "\u3010\u53BB\u8001\u677F\u529E\u516C\u5BA4\u548C\u8001\u677F\u804A\u804A\u3011"
+    speakerPortrait: {fileID: 0}
+    voiceClip: {fileID: 0}
+  flagsToSet:
+  - CanTalkToBossDay4
+  flagsToRemove:
+  - Day4

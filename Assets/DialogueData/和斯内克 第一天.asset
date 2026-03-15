@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff45d1b559b33be46bd69a25b82ab052, type: 3}
+  m_Name: "\u548C\u65AF\u5185\u514B \u7B2C\u4E00\u5929"
+  m_EditorClassIdentifier: 
+  characterName: 
+  characterSprite: {fileID: 0}
+  sentences: []
+  voiceClip: {fileID: 0}
+  lines:
+  - speakerName: "\u6CE2\u5495"
+    text: "\u4ECA\u5929\u662F\u5165\u804C\u7B2C\u4E00\u5929\uFF0C\u4E0D\u77E5\u9053\u4E3A\u4EC0\u4E48\uFF0C\u6700\u8FD1\u5DE5\u4F5C\u8D8A\u6765\u8D8A\u96BE\u627E\u3002\u6211\u5F97\u73CD\u60DC\u8FD9\u4EFD\u5DE5\u4F5C\uFF0C\u8868\u73B0\u79EF\u6781\u70B9\u3002"
+    speakerPortrait: {fileID: 221768547408008743, guid: 2fe4b85907b523d48ba62a4b51fd1046, type: 3}
+    voiceClip: {fileID: 8300000, guid: 3233e7abe9b1c1f44b7bc33088735f00, type: 3}
+  - speakerName: "\u65AF\u5185\u514B"
+    text: "\u6B22\u8FCE\u52A0\u5165\u6211\u4EEC\u516C\u53F8\uFF0C\u6211\u5148\u5E26\u4F60\u719F\u6089\u4E00\u4E0B\u6D41\u7A0B\u5427\n\uFF08\u9F20\u6807\u5DE6\u952E\u4EE5\u8DF3\u8F6C\u5230\u4E0B\u4E00\u6761\u5BF9\u8BDD\uFF09"
+    speakerPortrait: {fileID: 8325447771760189502, guid: 4b5de27edbee98e41ae3f41fb75b6692, type: 3}
+    voiceClip: {fileID: 8300000, guid: 4d56fd3adde2a2e4290eac082881ab8a, type: 3}
+  - speakerName: "\u65AF\u5185\u514B"
+    text: "\u6309WASD\uFF0C\u4EE5\u8FDB\u884C\u4E0A\u4E0B\u5DE6\u53F3\u79FB\u52A8"
+    speakerPortrait: {fileID: 8325447771760189502, guid: 4b5de27edbee98e41ae3f41fb75b6692, type: 3}
+    voiceClip: {fileID: 8300000, guid: a137e106245597543a205307482ac4d9, type: 3}
+  - speakerName: "\u65AF\u5185\u514B"
+    text: "\u6309R\u53EF\u4EE5\u8FDB\u884C\u4E00\u7CFB\u5217\u4EA4\u4E92"
+    speakerPortrait: {fileID: 8325447771760189502, guid: 4b5de27edbee98e41ae3f41fb75b6692, type: 3}
+    voiceClip: {fileID: 8300000, guid: 49b7499c6184f024baf48e0931ec8696, type: 3}
+  - speakerName: "\u65AF\u5185\u514B"
+    text: "\u4F60\u73B0\u5728\u7684\u5DE5\u4F5C\u5185\u5BB9\u5F88\u7B80\u5355\uFF0C\u770B\u5230\u4E0B\u9762\u201CR\u201D\u7BAD\u5934\u6307\u5411\u7684\u4F4D\u7F6E\u4E86\u5417\uFF1F"
+    speakerPortrait: {fileID: 8325447771760189502, guid: 4b5de27edbee98e41ae3f41fb75b6692, type: 3}
+    voiceClip: {fileID: 8300000, guid: 5bf4c8a17a7aa9c4b9323b9d556eb3bf, type: 3}
+  - speakerName: "\u65AF\u5185\u514B"
+    text: "\u8FD9\u5C31\u662F\u4F60\u7684\u5DE5\u4F4D\uFF0C\u53EA\u9700\u8981\u5728\u8FD9\u91CC\u7528\u9F20\u6807\u5DE6\u952E\u9009\u4E2D\u201C\u76EE\u6807\u5B57\u7B26\u201D\uFF0C\u70B9\u51FB\u201C\u5220\u9664\u201D\uFF0C\u6D88\u9664\u6389\u5B83\u4EEC\u5C31\u53EF\u4EE5\u4E86\xB7"
+    speakerPortrait: {fileID: 8325447771760189502, guid: 4b5de27edbee98e41ae3f41fb75b6692, type: 3}
+    voiceClip: {fileID: 8300000, guid: d98b6e7240ac04b48aaa0a2b18b69368, type: 3}
+  - speakerName: "\u6CE2\u5495"
+    text: "\uFF08\u5185\u5FC3os\uFF1A\u8FD9\u662F\u4EC0\u4E48\u2026\u2026\uFF09"
+    speakerPortrait: {fileID: 221768547408008743, guid: 2fe4b85907b523d48ba62a4b51fd1046, type: 3}
+    voiceClip: {fileID: 8300000, guid: c4ed6840900d3104c8b138967975ba04, type: 3}
+  - speakerName: "\u6CE2\u5495"
+    text: "\u597D\u7684"
+    speakerPortrait: {fileID: 221768547408008743, guid: 2fe4b85907b523d48ba62a4b51fd1046, type: 3}
+    voiceClip: {fileID: 8300000, guid: c019a00d5b9262147819a6ff2fd31e17, type: 3}
+  - speakerName: "\u65C1\u767D"
+    text: "\u3010\u4EFB\u52A1\uFF1A\u5230\u4E0B\u65B9\u5DE5\u4F4D\u8FDB\u884C\u4ECA\u5929\u7684\u5DE5\u4F5C\u3011"
+    speakerPortrait: {fileID: 0}
+    voiceClip: {fileID: 0}
+  flagsToSet:
+  - CanEnterWorkScene
+  flagsToRemove:
+  - CanTalkToBossDay1

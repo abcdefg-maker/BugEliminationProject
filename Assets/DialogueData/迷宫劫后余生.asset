@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff45d1b559b33be46bd69a25b82ab052, type: 3}
+  m_Name: "\u8FF7\u5BAB\u52AB\u540E\u4F59\u751F"
+  m_EditorClassIdentifier: 
+  characterName: 
+  characterSprite: {fileID: 0}
+  sentences: []
+  voiceClip: {fileID: 0}
+  lines:
+  - speakerName: "\uFF1F\uFF1F\uFF1F"
+    text: "\u2026\u2026\u8BF6\u600E\u4E48\u56DE\u4E8B\u8FD9\u4E2A\u5730\u65B9\u2026\u2026"
+    speakerPortrait: {fileID: 0}
+    voiceClip: {fileID: 0}
+  - speakerName: "\uFF1F\uFF1F\uFF1F"
+    text: "\u4F60\u6765\u770B\u4E00\u4E0B\u2026\u2026"
+    speakerPortrait: {fileID: 0}
+    voiceClip: {fileID: 0}
+  - speakerName: "\uFF1F\uFF1F\uFF1F"
+    text: "\u4E0B\u6B21\u518D\u641E\u5427\u8FD9\u4E2A\u2026\u2026"
+    speakerPortrait: {fileID: 0}
+    voiceClip: {fileID: 0}
+  - speakerName: 
+    text: "\u2026\u2026"
+    speakerPortrait: {fileID: 0}
+    voiceClip: {fileID: 0}
+  - speakerName: "\u6CE2\u5495"
+    text: "\u8FD9\u5230\u5E95\u2026\u2026"
+    speakerPortrait: {fileID: -7568810174292162258, guid: d84d46e4c610c174f9882f69f78876ff, type: 3}
+    voiceClip: {fileID: 8300000, guid: 14c30980a07e0eb41ae7c7937fbf4556, type: 3}
+  - speakerName: "\u6CE2\u5495"
+    text: "\u2026\u2026\uFF01\uFF01\uFF1F"
+    speakerPortrait: {fileID: -7568810174292162258, guid: d84d46e4c610c174f9882f69f78876ff, type: 3}
+    voiceClip: {fileID: 8300000, guid: c019a00d5b9262147819a6ff2fd31e17, type: 3}
+  - speakerName: "\u6CE2\u5495"
+    text: "\u4E0D\u7BA1\u4E86\uFF01\u5148\u8DD1\u51FA\u53BB\u518D\u8BF4\uFF01"
+    speakerPortrait: {fileID: -7568810174292162258, guid: d84d46e4c610c174f9882f69f78876ff, type: 3}
+    voiceClip: {fileID: 8300000, guid: 48dc908877b0fa94e9eeb112dfee4714, type: 3}
+  - speakerName: "\u65C1\u767D"
+    text: "\u3010\u8BF7\u4ECE\u524D\u65B9\u9003\u51FA\u8FF7\u5BAB\u3011"
+    speakerPortrait: {fileID: 0}
+    voiceClip: {fileID: 0}
+  flagsToSet:
+  - CanLeave
+  flagsToRemove: []
