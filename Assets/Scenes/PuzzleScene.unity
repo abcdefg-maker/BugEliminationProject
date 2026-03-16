@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 8214848}
   - component: {fileID: 8214847}
   - component: {fileID: 8214849}
+  - component: {fileID: 8214850}
   m_Layer: 8
   m_Name: DeleteKey
   m_TagString: Untagged
@@ -172,7 +173,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
+  m_Size: {x: 0.01, y: 1}
   m_Direction: 0
 --- !u!4 &8214848
 Transform:
@@ -205,12 +206,46 @@ MonoBehaviour:
   moveSpeed: 3
   chaseRange: 0
   stopDistance: 1.5
+  gridCenter: {x: 10, y: 20}
+  gridSize: {x: 30, y: 80}
+  cellSize: 0.5
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  pathUpdateInterval: 0.3
   deathPanel: {fileID: 1753708501}
   deathText: {fileID: 743713669}
   deathMessage: "\u4F60\u88AB\u6E05\u9664\u4E86\uFF01\u518D\u8BD5\u4E00\u6B21\uFF01\u62FC\u547D\u5954\u8DD1\u5427\uFF01\u9003\u79BB\u8FF7\u5BAB\uFF01"
   reloadDelay: 2.5
   disablePlayerOnDeath: 1
   playerControlScripts: []
+--- !u!50 &8214850
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8214846}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
 --- !u!1 &109211316
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,7 +983,7 @@ GameObject:
   - component: {fileID: 810403547}
   - component: {fileID: 810403546}
   - component: {fileID: 810403545}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: "\u8FF7\u5BAB1"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
