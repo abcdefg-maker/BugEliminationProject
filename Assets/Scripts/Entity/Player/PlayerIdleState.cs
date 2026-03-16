@@ -3,31 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Windows;
 
-public class PlayerIdleState : PlayerState
+namespace BugElimination
 {
-    public PlayerIdleState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    public class PlayerIdleState : PlayerState
     {
-    }
+        public PlayerIdleState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+        {
+        }
 
-    public override void Enter()
-    {
-        base.Enter();
+        public override void Enter()
+        {
+            base.Enter();
 
-        player.SetZeroVelocity();
-    }
+            player.SetZeroVelocity();
+        }
 
-    public override void Exit()
-    {
-        base.Exit();
-    }
+        public override void Exit()
+        {
+            base.Exit();
+        }
 
-    public override void Update()
-    {
-        base.Update();
+        public override void Update()
+        {
+            base.Update();
 
-        //Debug.Log("Now is in IdleState");
+            //Debug.Log("Now is in IdleState");
 
-        if (xInput != 0 || yInput != 0)
-            stateMachine.ChangeState(player.moveState);
+            if (xInput != 0 || yInput != 0)
+                stateMachine.ChangeState(player.moveState);
+        }
     }
 }

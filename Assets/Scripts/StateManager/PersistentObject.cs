@@ -1,15 +1,18 @@
 using UnityEngine;
 using System;
 
-[DisallowMultipleComponent]
-public class PersistentObject : MonoBehaviour
+namespace BugElimination
 {
-    [Tooltip("Ã¿¸öÎïÌåÎ¨Ò»µÄ±êÊ¶·û£¬ÓÃÓÚ±£´æÓë»Ö¸´Î»ÖÃ/×´Ì¬¡£")]
-    public string objectID;
-
-    private void Reset()
+    [DisallowMultipleComponent]
+    public class PersistentObject : MonoBehaviour
     {
-        if (string.IsNullOrEmpty(objectID))
-            objectID = Guid.NewGuid().ToString();
+        [Tooltip("Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î¨Ò»ï¿½Ä±ï¿½Ê¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú±ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½Î»ï¿½ï¿½/×´Ì¬ï¿½ï¿½")]
+        public string objectID;
+
+        private void Reset()
+        {
+            if (string.IsNullOrEmpty(objectID))
+                objectID = Guid.NewGuid().ToString();
+        }
     }
 }

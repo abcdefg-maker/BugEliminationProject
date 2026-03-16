@@ -2,123 +2,98 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>
-/// Í¨ÓÃ NPC Àà£º
-/// Ö§³Ö¶à½×¶Î¶Ô»°¡¢¾çÇé flag ¿ØÖÆ¡¢×Ô¶¯ÒÆ¶¯µÈ¹¦ÄÜ
-/// </summary>
-public class NPC : MonoBehaviour
+namespace BugElimination
 {
-    [Header("»ù´¡ÐÅÏ¢")]
-    public string npcName;
-    public Sprite npcPortrait;
-    public float moveSpeed = 2f;
-
-    [Header("¶Ô»°ÏµÍ³")]
-    public DialogueManager dialogueManager;
-    public List<NPCDialogueStage> dialogueStages = new List<NPCDialogueStage>();
-
-    [Header("¾çÇéÐÐÎª")]
-    public string triggerFlagAfterTalk; // ¶Ô»°ºó×Ô¶¯ÉèÖÃµÄ¾çÇé±êÖ¾£¨¿ÉÎª¿Õ£©
-    public bool canMoveAfterTalk = false;
-    public Vector3 moveTargetPosition;
-
-    private bool _isTalking = false;
-    private bool _hasMoved = false;
-
-    [System.Serializable]
-    public class NPCDialogueStage
-    {
-        public string unlockFlag;       // ½âËøÌõ¼þ
-        public bool requireUnlock;      // ÊÇ·ñÐèÒªflag
-        public DialogueData dialogue;   // ¶ÔÓ¦¶Ô»°Êý¾Ý
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player") && !_isTalking)
-        {
-            DialogueData selected = GetAvailableDialogue();
-            if (selected != null && dialogueManager != null)
-            {
-                _isTalking = true;
-                dialogueManager.StartDialogue(selected);
-
-                // ÔÚ¶Ô»°½áÊøºóÖ´ÐÐ¾çÇéÊÂ¼þ
-                StartCoroutine(WaitForDialogueEnd());
-            }
-            else
-            {
-                Debug.Log($"{npcName} µ±Ç°Ã»ÓÐ¿ÉÓÃ¶Ô»°»òÎ´·ÖÅä DialogueManager¡£");
-            }
-        }
-    }
-
     /// <summary>
-    /// ÌôÑ¡µ±Ç°ÄÜ²¥·ÅµÄ¶Ô»°½×¶Î
+    /// Í¨ï¿½ï¿½ NPC ï¿½à£º
+    /// Ö§ï¿½Ö¶ï¿½×¶Î¶Ô»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ flag ï¿½ï¿½ï¿½Æ¡ï¿½ï¿½Ô¶ï¿½ï¿½Æ¶ï¿½ï¿½È¹ï¿½ï¿½ï¿½
     /// </summary>
-    private DialogueData GetAvailableDialogue()
+    public class NPC : MonoBehaviour
     {
-        DialogueData result = null;
+        [Header("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢")]
+        public string npcName;
+        public Sprite npcPortrait;
+        public float moveSpeed = 2f;
 
-        foreach (var stage in dialogueStages)
+        [Header("ï¿½Ô»ï¿½ÏµÍ³")]
+        public DialogueManager dialogueManager;
+        public List<NPCDialogueStage> dialogueStages = new List<NPCDialogueStage>();
+
+        [Header("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª")]
+        public string triggerFlagAfterTalk; // ï¿½Ô»ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ÃµÄ¾ï¿½ï¿½ï¿½ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½
+        public bool canMoveAfterTalk = false;
+        public Vector3 moveTargetPosition;
+
+        private bool _isTalking = false;
+        private bool _hasMoved = false;
+
+        [System.Serializable]
+        public class NPCDialogueStage : IDialogueStage
         {
-            if (stage.requireUnlock)
+            public string unlockFlag;
+            public bool requireUnlock;
+            public DialogueData dialogue;
+
+            string IDialogueStage.UnlockFlag => unlockFlag;
+            bool IDialogueStage.RequireUnlock => requireUnlock;
+            DialogueData IDialogueStage.Dialogue => dialogue;
+        }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.CompareTag(GameConstants.Tags.Player) && !_isTalking)
             {
-                if (GameStateManager.Instance != null &&
-                    GameStateManager.Instance.CheckFlag(stage.unlockFlag))
+                DialogueData selected = GetAvailableDialogue();
+                if (selected != null && dialogueManager != null)
                 {
-                    result = stage.dialogue;
+                    _isTalking = true;
+                    dialogueManager.onDialogueEnd += OnDialogueEnded;
+                    dialogueManager.StartDialogue(selected);
+                }
+                else
+                {
+                    Debug.Log($"{npcName} ï¿½ï¿½Ç°Ã»ï¿½Ð¿ï¿½ï¿½Ã¶Ô»ï¿½ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½ DialogueManagerï¿½ï¿½");
                 }
             }
-            else
+        }
+
+        /// <summary>
+        /// ï¿½ï¿½Ñ¡ï¿½ï¿½Ç°ï¿½Ü²ï¿½ï¿½ÅµÄ¶Ô»ï¿½ï¿½×¶ï¿½
+        /// </summary>
+        private DialogueData GetAvailableDialogue()
+        {
+            return DialogueStageResolver.Resolve(dialogueStages);
+        }
+
+        private void OnDialogueEnded()
+        {
+            _isTalking = false;
+
+            if (!string.IsNullOrEmpty(triggerFlagAfterTalk))
             {
-                result = stage.dialogue; // Ä¬ÈÏ½×¶Î
+                GameStateManager.Instance.SetFlag(triggerFlagAfterTalk);
+            }
+
+            if (canMoveAfterTalk && !_hasMoved)
+            {
+                StartCoroutine(MoveToTarget());
             }
         }
 
-        return result;
-    }
-
-    /// <summary>
-    /// µÈ´ý¶Ô»°½áÊøºóÖ´ÐÐ¾çÇé²Ù×÷
-    /// £¨¼ì²â dialogueManager µÄ¼¤»î×´Ì¬£©
-    /// </summary>
-    private IEnumerator WaitForDialogueEnd()
-    {
-        // µÈ´ý¶Ô»°Ãæ°å¹Ø±Õ£¨±íÊ¾¶Ô»°½áÊø£©
-        while (dialogueManager != null && dialogueManager.dialoguePanel.activeSelf)
+        /// <summary>
+        /// NPC ï¿½Ô¶ï¿½ï¿½Æ¶ï¿½
+        /// </summary>
+        private IEnumerator MoveToTarget()
         {
-            yield return null;
+            _hasMoved = true;
+
+            while (Vector3.Distance(transform.position, moveTargetPosition) > 0.05f)
+            {
+                transform.position = Vector3.MoveTowards(transform.position, moveTargetPosition, moveSpeed * Time.deltaTime);
+                yield return null;
+            }
+
+            Debug.Log($"{npcName} ï¿½Æ¶ï¿½ï¿½ï¿½É¡ï¿½");
         }
-
-        _isTalking = false;
-
-        // ¶Ô»°½áÊøºóÉèÖÃ¾çÇé±êÖ¾
-        if (!string.IsNullOrEmpty(triggerFlagAfterTalk))
-        {
-            GameStateManager.Instance.SetFlag(triggerFlagAfterTalk);
-        }
-
-        // ¿ÉÑ¡£º´¥·¢NPCÒÆ¶¯
-        if (canMoveAfterTalk && !_hasMoved)
-        {
-            StartCoroutine(MoveToTarget());
-        }
-    }
-
-    /// <summary>
-    /// NPC ×Ô¶¯ÒÆ¶¯
-    /// </summary>
-    private IEnumerator MoveToTarget()
-    {
-        _hasMoved = true;
-
-        while (Vector3.Distance(transform.position, moveTargetPosition) > 0.05f)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, moveTargetPosition, moveSpeed * Time.deltaTime);
-            yield return null;
-        }
-
-        Debug.Log($"{npcName} ÒÆ¶¯Íê³É¡£");
     }
 }
