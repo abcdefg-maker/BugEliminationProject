@@ -140,7 +140,7 @@ namespace BugElimination
                 yield return new WaitForSeconds(typingSpeed);
             }
 
-            if (audioSource.isPlaying)
+            if (audioSource != null && audioSource.isPlaying)
             {
                 audioSource.Stop();
             }
@@ -181,24 +181,44 @@ namespace BugElimination
 
         private void EndDialogue()
         {
-            if (audioSource.isPlaying)
+            if (audioSource != null && audioSource.isPlaying)
                 audioSource.Stop();
 
             // 对话结束后修改剧情状态
             if (currentDialogue != null)
             {
                 // 设置 flag
-                foreach (var flag in currentDialogue.flagsToSet)
+                if (currentDialogue.flagsToSet != null)
                 {
-                    GameStateManager.Instance.SetFlag(flag);
-                    Debug.Log($"【DialogueManager】已触发 SetFlag: {flag}");
+                    foreach (var flag in currentDialogue.flagsToSet)
+                    {
+                        if (GameStateManager.Instance != null)
+                        {
+                            GameStateManager.Instance.SetFlag(flag);
+                            Debug.Log($"【DialogueManager】已触发 SetFlag: {flag}");
+                        }
+                        else
+                        {
+                            Debug.LogError($"【DialogueManager】GameStateManager.Instance 为 null，无法 SetFlag: {flag}");
+                        }
+                    }
                 }
 
                 // 移除 flag
-                foreach (var flag in currentDialogue.flagsToRemove)
+                if (currentDialogue.flagsToRemove != null)
                 {
-                    GameStateManager.Instance.RemoveFlag(flag);
-                    Debug.Log($"【DialogueManager】已触发 RemoveFlag: {flag}");
+                    foreach (var flag in currentDialogue.flagsToRemove)
+                    {
+                        if (GameStateManager.Instance != null)
+                        {
+                            GameStateManager.Instance.RemoveFlag(flag);
+                            Debug.Log($"【DialogueManager】已触发 RemoveFlag: {flag}");
+                        }
+                        else
+                        {
+                            Debug.LogError($"【DialogueManager】GameStateManager.Instance 为 null，无法 RemoveFlag: {flag}");
+                        }
+                    }
                 }
             }
 
